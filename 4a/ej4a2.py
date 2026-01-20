@@ -41,14 +41,16 @@ Exemple:
      Sortida:
      {'apple': 2, 'banana': 2, 'orange': 1, 'kiwi': 4}    
 """
+from collections import Counter
 
 
 def count_fruits(fruits_list):
-    # Write here your code
-    pass
+    return Counter(fruits_list)
+
+# Counter LO ORDENA TODO Y TE SALE TAL CUAL PIDE EL EJERCICIO, LA CLAVE SIN REPETIRSE Y LAS VECES QUE APARECE
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# fruits = ['apple', 'banana', 'orange', 'apple', 'kiwi', 'banana', 'kiwi', 'kiwi', 'kiwi']
-# print(count_fruits(fruits))
+fruits = ['apple', 'banana', 'orange', 'apple', 'kiwi', 'banana', 'kiwi', 'kiwi', 'kiwi']
+print(count_fruits(fruits))
