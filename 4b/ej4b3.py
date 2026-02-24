@@ -82,10 +82,21 @@ def create_list(length_list):
     the second one created in Heap by reusing the first list.
     """
 
-    # Write here your code
-    pass
+    i = 0
+    ram_list = []
+    
+    if length_list < 0:
+        raise ValueError("The number must be positive")
+    
+    while i < length_list:
+        random_number = random.randint(0,100)
+        ram_list.append(random_number)
+        length_list -= 1
+    
+
+    return (ram_list, copy.deepcopy(ram_list))
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(create_list(6))
+print(create_list(6))

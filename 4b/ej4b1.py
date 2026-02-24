@@ -44,21 +44,23 @@ Exemple:
 
 
 def squared_sum_ram(numbers_list):
-    # Store the list in RAM
-    # Write here your code
-    pass
+    suma_total = 0
+    for i in numbers_list:
+        suma_total += i * i
+        
+    return suma_total
 
 
 def squared_sum_heap(numbers_list):
     # Store the list in Heap
     # You should correct and overwrite something in the following line.
-    squared_sum_list = [num**1 for num in numbers_list]
+    squared_sum_list = [num*num for num in numbers_list]
     heap_sum = sum(squared_sum_list)
     return heap_sum
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# numbers_list = [6, 4, 7]
-# print(squared_sum_ram(numbers_list))
-# print(squared_sum_heap(numbers_list))
+numbers_list = [6, 4, 7]
+print(squared_sum_ram(numbers_list))
+print(squared_sum_heap(numbers_list))
